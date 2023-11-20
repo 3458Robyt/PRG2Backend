@@ -3,6 +3,7 @@
 	<name>ProyectoPRGBackend</name>
 	<comment></comment>
 	<projects>
+		<project>PRG2WEBJSF06C</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
