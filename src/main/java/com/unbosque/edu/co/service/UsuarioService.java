@@ -7,12 +7,8 @@ import com.unbosque.edu.co.entity.Usuario;
 import com.unbosque.edu.co.repository.UsuarioRepository;
 
 @Service
-public class UsuarioService {
+public interface UsuarioService {
+	
+	public List<Usuario> findAll(); 
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
-
-    public List<Usuario> findAll() {
-        return usuarioRepository.findAll();
-    }
 }

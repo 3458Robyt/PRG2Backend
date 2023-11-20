@@ -1,4 +1,4 @@
-package com.edu.unbosque.co;
+package com.unbosque.edu.co;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.unbosque.edu.co.service.UsuarioService;
 
 @SpringBootApplication
 //@ComponentScan(basePackages = "com.edu.unbosque.co.rest")
@@ -18,8 +17,6 @@ import com.unbosque.edu.co.service.UsuarioService;
 //@EntityScan("com.edu.unbosque.co.entity")
 public class ProyectoPrgBackendApplication {
 	
-	@Autowired
-	private UsuarioService usuarioService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoPrgBackendApplication.class, args);
