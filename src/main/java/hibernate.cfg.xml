@@ -4,8 +4,8 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/bdejemplo</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibernate.connection.url">jdbc:mysql://prg2.mysql.database.azure.com:3306/prg2</property>
+		<property name="hibernate.connection.username">rootPRG2</property>
+		<property name="hibernate.connection.password">ey7rpGHGg89cefZ</property>
 	</session-factory>
 </hibernate-configuration>

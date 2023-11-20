@@ -1,4 +1,4 @@
-package com.edu.unbosque;
+package com.edu.unbosque.co;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
