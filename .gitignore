@@ -1,6 +1,3 @@
-# Ignorar archivos de configuración con información sensible
-application.properties
-hibernate.cfg.xml
 
 
 HELP.md
