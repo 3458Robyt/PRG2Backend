@@ -2,7 +2,8 @@ package com.unbosque.edu.co.service;
 
 import java.util.List;
 import java.util.Optional;
-import com.unbosque.edu.co.entity.Cliente;
+
+import com.unbosque.edu.co.entity.Client;
 import com.unbosque.edu.co.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,19 +18,19 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-    public List<Cliente> getAllClientes() {
+    public List<Client> getAllClientes() {
         return clienteRepository.findAll();
     }
 
-    public Optional<Cliente> getClienteById(Long id) {
-        return clienteRepository.findById(id);
-    }
+//    public Optional<Client> getClienteById(Integer id) {
+//        return clienteRepository.findById(id);
+//    }
 
-    public Cliente saveCliente(Cliente cliente) {
+    public Client saveCliente(Client cliente) {
         return clienteRepository.save(cliente);
     }
 
-    public void deleteCliente(Long id) {
-        clienteRepository.deleteById(id);
-    }
+//    public void deleteCliente(Integer id) {
+//        clienteRepository.deleteById(id);
+//    }
 }

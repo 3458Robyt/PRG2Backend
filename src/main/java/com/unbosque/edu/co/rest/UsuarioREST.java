@@ -5,23 +5,32 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unbosque.edu.co.entity.Usuario;
+import com.unbosque.edu.co.entity.User;
 import com.unbosque.edu.co.service.UsuarioService;
 
 @RestController
-@RequestMapping ("/users/")
+@RequestMapping("/users/")
 public class UsuarioREST {
-	
+
 	@Autowired
 	private UsuarioService Usuarioservice;
-	
+
 	@GetMapping
-	private ResponseEntity<List<Usuario>> getAllUsuarios(){
+	private ResponseEntity<List<User>> getAllUsuarios() {
 		return ResponseEntity.ok(Usuarioservice.findAll());
 	}
-	
-}
 
+	@PostMapping()
+
+	public void guardarUsuario(@RequestBody User usuario) {
+
+		Usuarioservice.guardarUsuario(usuario);
+
+	}
+
+}

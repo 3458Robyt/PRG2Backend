@@ -3,8 +3,8 @@ package com.unbosque.edu.co.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.unbosque.edu.co.entity.Usuario;
-import com.unbosque.edu.co.entity.Auditoria;
+import com.unbosque.edu.co.entity.Auditory;
+import com.unbosque.edu.co.entity.User;
 
 public class HibernateUtil {
 
@@ -18,8 +18,8 @@ public class HibernateUtil {
 		if (sessionFactory == null) {
 			try {
 				Configuration ac = new Configuration();
-				ac.addAnnotatedClass(Usuario.class);
-				ac.addAnnotatedClass(Auditoria.class);
+				ac.addAnnotatedClass(User.class);
+				ac.addAnnotatedClass(Auditory.class);
 				sessionFactory = ac.configure().buildSessionFactory();
 
 			} catch (Throwable ex) {

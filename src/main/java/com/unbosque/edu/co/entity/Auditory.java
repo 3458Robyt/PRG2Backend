@@ -1,54 +1,50 @@
 package com.unbosque.edu.co.entity;
 
-import java.io.Serializable;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.NamedQuery;
+import java.io.Serializable;
 
 import java.util.Date;
 
-
+import jakarta.persistence.*;
 /**
- * The persistent class for the auditoria database table.
+ * The persistent class for the auditory database table.
  * 
  */
 @Entity
-@NamedQuery(name="Auditoria.findAll", query="SELECT a FROM Auditoria a")
-public class Auditoria implements Serializable {
+@NamedQuery(name="Auditory.findAll", query="SELECT a FROM Auditory a")
+@Table(name="auditory")
+public class Auditory implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="my_row_id")
-	private long myRowId;
-
-	@Column(name="accion_audtria")
-	private String accionAudtria;
-
-	@Column(name="address_audtria")
-	private String addressAudtria;
-
-	@Column(name="comentario_audtria")
-	private String comentarioAudtria;
-
-	@Column(name="fcha_audtria")
-	private Date fchaAudtria;
-
+	@Column(name="id", nullable = false)
 	private int id;
 
-	@Column(name="usrio_audtria")
+	@Column(name="accion_audtria", nullable = false, length = 1)
+	private String accionAudtria;
+
+	@Column(name="address_audtria", nullable = false, length = 20)
+	private String addressAudtria;
+
+	@Column(name="comentario_audtria", nullable = false, length = 60)
+	private String comentarioAudtria;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="fcha_audtria", nullable = false)
+	private Date fchaAudtria;
+
+	@Column(name="usrio_audtria", nullable = false, length = 8)
 	private String usrioAudtria;
 
-	public Auditoria() {
+	public Auditory() {
 	}
 
-	public long getMyRowId() {
-		return this.myRowId;
+	public int getId() {
+		return this.id;
 	}
 
-	public void setMyRowId(long myRowId) {
-		this.myRowId = myRowId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getAccionAudtria() {
@@ -81,14 +77,6 @@ public class Auditoria implements Serializable {
 
 	public void setFchaAudtria(Date fchaAudtria) {
 		this.fchaAudtria = fchaAudtria;
-	}
-
-	public int getId() {
-		return this.id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getUsrioAudtria() {
