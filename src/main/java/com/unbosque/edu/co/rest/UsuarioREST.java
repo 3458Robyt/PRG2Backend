@@ -1,4 +1,4 @@
-package com.edu.unbosque.co.rest;
+package com.unbosque.edu.co.rest;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import com.unbosque.edu.co.entity.Usuario;
 import com.unbosque.edu.co.service.UsuarioService;
 
 @RestController
-@RequestMapping ("/users")
+@RequestMapping ("/users/")
 public class UsuarioREST {
 	
 	@Autowired
