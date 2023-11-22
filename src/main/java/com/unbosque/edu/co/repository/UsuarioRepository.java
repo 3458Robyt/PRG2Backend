@@ -7,5 +7,5 @@ import com.unbosque.edu.co.entity.User;
 
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<User, Long> {
+public interface UsuarioRepository extends JpaRepository<User, String> {
 }
